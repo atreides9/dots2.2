@@ -109,16 +109,16 @@ export function ReaderView() {
 
   const modeStyles = {
     dark: {
-      bg: 'bg-[#1E1B17]',
-      text: 'text-[#D9D3C7]',
+      bg: 'bg-[#191A1E]',
+      text: 'text-[#CDD2D8]',
     },
     sepia: {
-      bg: 'bg-[#F5F0E6]',
-      text: 'text-[#3A3530]',
+      bg: 'bg-[#E9EDF2]',
+      text: 'text-[#323438]',
     },
     light: {
       bg: 'bg-white',
-      text: 'text-[#1A1714]',
+      text: 'text-[#17181B]',
     },
   };
 
