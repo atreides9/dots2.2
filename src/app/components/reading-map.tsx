@@ -445,7 +445,7 @@ export function ReadingMap({ topics, totalArticles, onTopicClick, selectedTopic 
                     transition={{ duration: 0.15 }}
                     className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-30 whitespace-nowrap"
                   >
-                    <div className="bg-[#2A251E] border border-[rgba(138,131,120,0.25)] rounded-lg px-3 py-2 shadow-xl">
+                    <div className="bg-[#2A251E] border border-[rgba(115,111,114,0.25)] rounded-lg px-3 py-2 shadow-xl">
                       <p className="text-xs text-[var(--text-primary)] font-medium">
                         {node.topic}
                       </p>
@@ -470,7 +470,7 @@ export function ReadingMap({ topics, totalArticles, onTopicClick, selectedTopic 
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
               className="absolute bottom-3 left-3 right-3 z-20"
             >
-              <div className="bg-[#2A251E]/95 backdrop-blur-sm border border-[rgba(138,131,120,0.2)] rounded-xl px-4 py-3 flex items-center justify-between">
+              <div className="bg-[#2A251E]/95 backdrop-blur-sm border border-[rgba(115,111,114,0.2)] rounded-xl px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-[var(--accent-green)]/15 flex items-center justify-center flex-shrink-0">
                     <BookOpen className="w-4 h-4 text-[var(--accent-green)]" />

@@ -8,7 +8,7 @@
   --bg-surface: #242019;
   --bg-surface-hover: #2A251E;
   --text-primary: #E8E2D9;
-  --text-muted: #8A8378;
+  --text-muted: #736f72;
   --accent-green: #4A7C59;
   --accent-green-hover: #5A8C69;
   
@@ -37,7 +37,7 @@
   --accent-foreground: var(--text-primary);
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
-  --border: rgba(138, 131, 120, 0.2);
+  --border: rgba(115, 111, 114, 0.2);
   --input: transparent;
   --input-background: var(--bg-surface);
   --switch-background: var(--text-muted);

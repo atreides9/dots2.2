@@ -79,8 +79,8 @@ export function ErrorPage() {
         case 403:
           return {
             icon: <ShieldAlert className="w-12 h-12" />,
-            iconColor: 'text-[#B8956A]',
-            iconBg: 'bg-[#B8956A]/15',
+            iconColor: 'text-[#736f72]',
+            iconBg: 'bg-[#736f72]/15',
             title: '접근 권한이 없어요',
             description: '이 페이지를 보려면 로그인이 필요하거나, 접근 권한이 없을 수 있어요.',
             suggestion: '로그인 후 다시 시도하거나, 권한이 있는지 확인해주세요.',
@@ -106,8 +106,8 @@ export function ErrorPage() {
         case 503:
           return {
             icon: <ServerCrash className="w-12 h-12" />,
-            iconColor: 'text-[#C67B5C]',
-            iconBg: 'bg-[#C67B5C]/15',
+            iconColor: 'text-[#736f72]',
+            iconBg: 'bg-[#736f72]/15',
             title: '서버에 문제가 생겼어요',
             description: '일시적인 서버 오류로 요청을 처리할 수 없어요.',
             suggestion: '잠시 후 다시 시도해주시거나, 문제가 계속되면 고객센터로 문의해주세요.',
@@ -137,8 +137,8 @@ export function ErrorPage() {
     if (error instanceof TypeError && error.message.includes('fetch')) {
       return {
         icon: <WifiOff className="w-12 h-12" />,
-        iconColor: 'text-[#8A8378]',
-        iconBg: 'bg-[#8A8378]/15',
+        iconColor: 'text-[#736f72]',
+        iconBg: 'bg-[#736f72]/15',
         title: '네트워크 연결을 확인해주세요',
         description: '인터넷 연결이 불안정하거나 끊어진 것 같아요.',
         suggestion: '네트워크 연결 상태를 확인한 후 다시 시도해주세요.',
@@ -168,8 +168,8 @@ export function ErrorPage() {
     const errorMessage = error instanceof Error ? error.message : '알 수 없는 오류';
     return {
       icon: <AlertCircle className="w-12 h-12" />,
-      iconColor: 'text-[#C67B5C]',
-      iconBg: 'bg-[#C67B5C]/15',
+      iconColor: 'text-[#736f72]',
+      iconBg: 'bg-[#736f72]/15',
       title: '문제가 발생했어요',
       description: '예상치 못한 오류가 발생했습니다.',
       suggestion: '페이지를 새로고침하거나 잠시 후 다시 시도해주세요.',
