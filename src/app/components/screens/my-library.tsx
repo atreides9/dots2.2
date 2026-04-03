@@ -6,6 +6,7 @@ import { toast } from 'sonner';
 import { useUser } from '../../context/user-context';
 import { useScrap } from '../../context/scrap-context';
 import { api } from '../../lib/api';
+import { MOCK_SAVED_ARTICLES } from '../../lib/mock-data';
 import { ReadingMap } from '../reading-map';
 import { URLArticleInput } from '../url-article-input';
 
@@ -33,7 +34,8 @@ export function MyLibrary() {
       setSavedArticles(data.articles);
     } catch (err) {
       console.error('Failed to load saved articles:', err);
-      setError(true);
+      // Fallback to local mock data when API is unavailable
+      setSavedArticles(MOCK_SAVED_ARTICLES as any);
     } finally {
       setLoading(false);
     }

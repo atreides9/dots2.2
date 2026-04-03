@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { toast } from 'sonner';
 import { useUser } from '../../context/user-context';
 import { api } from '../../lib/api';
+import { MOCK_CONNECTIONS, MOCK_RECOMMENDATION } from '../../lib/mock-data';
 
 interface RecommendedUser {
   userId: string;
@@ -49,6 +50,10 @@ export function Connections() {
       setConnections(connData.connections);
     } catch (error) {
       console.error('Failed to load connections data:', error);
+      // Fallback to local mock data when API is unavailable
+      setRecommendation(MOCK_RECOMMENDATION);
+      setCanAdd(true);
+      setConnections(MOCK_CONNECTIONS);
     } finally {
       setLoading(false);
     }

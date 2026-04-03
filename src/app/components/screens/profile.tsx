@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { toast } from 'sonner';
 import { useUser } from '../../context/user-context';
 import { api } from '../../lib/api';
+import { MOCK_PROFILE } from '../../lib/mock-data';
 import { SettingsPanel } from '../settings-panel';
 
 interface ProfileData {
@@ -35,6 +36,8 @@ export function Profile() {
       setProfile(data);
     } catch (error) {
       console.error('Failed to load profile:', error);
+      // Fallback to local mock data when API is unavailable
+      setProfile(MOCK_PROFILE as any);
     } finally {
       setLoading(false);
     }

@@ -6,6 +6,7 @@ import { toast } from 'sonner';
 import { useUser } from '../../context/user-context';
 import { useScrap } from '../../context/scrap-context';
 import { api } from '../../lib/api';
+import { MOCK_FEED_ARTICLES } from '../../lib/mock-data';
 import { checkLevelUp } from '../../lib/gamification';
 import { NotificationPanel } from '../notification-panel';
 import { URLArticleInput } from '../url-article-input';
@@ -88,8 +89,10 @@ export function HomeFeed() {
       });
     } catch (error) {
       console.error('Failed to load feed:', error);
-      // Set empty articles on error to prevent infinite loading
-      setVisibleArticles([]);
+      // Fallback to local mock data when API is unavailable
+      const newArticles = MOCK_FEED_ARTICLES.slice(0, DAILY_ARTICLE_LIMIT);
+      setAllArticles(MOCK_FEED_ARTICLES);
+      setVisibleArticles(newArticles);
     } finally {
       setLoading(false);
     }
